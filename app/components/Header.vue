@@ -68,9 +68,9 @@
         >
           Регистрация
         </a>
-        <button @click="toggleTheme">
+        <button @click="toggleTheme" class="flex">
           <Icon 
-            name={{colorMode.value}} class="" size="20"/>
+            :name="$colorMode.value === 'dark' ? 'local:light' : 'local:dark'" class="" size="26"/>
         </button>
       </div>
     </div>

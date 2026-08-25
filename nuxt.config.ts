@@ -20,10 +20,13 @@ export default defineNuxtConfig({
     classSuffix: "",
   },
   icon: {
+    clientBundle:{
+      includeCustomCollections: true
+    },
     customCollections: [
     {
       prefix: 'local',
-      dir: './assets/icons/',
+      dir: './app/assets/icons',
       recursive: true
     }
     ]

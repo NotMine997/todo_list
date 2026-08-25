@@ -1,4 +1,22 @@
 @import "tailwindcss";
 @theme inline {
-    
+  --color-brand-bg: var(--bg-main);
+  --color-brand-text: var(--text-main);
+}
+
+:root {
+  --bg-main: #ffffff;
+  --text-main: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #0a0a0a;
+    --text-main: #ededed;
+  }
+}
+
+.dark {
+  --bg-main: #0a0a0a;
+  --text-main: #ededed;
 }
