@@ -1,20 +1,31 @@
-
-import tailwindcss from '@tailwindcss/vite';
-
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  css: ['~/assets/main.css'],
+  css: ["~/assets/main.css"],
+
   vite: {
-    plugins: [
-      tailwindcss()
-    ]
-    
+    plugins: [tailwindcss()],
   },
+
   app: {
-    head:{
-      title: "TickTask"
+    head: {
+      title: "TickTask",
+    },
+  },
+
+  modules: ["@nuxtjs/color-mode", "@nuxt/icon"],
+  colorMode: {
+    classSuffix: "",
+  },
+  icon: {
+    customCollections: [
+    {
+      prefix: 'local',
+      dir: './assets/icons/',
+      recursive: true
     }
-  }
-})
+    ]
+  },
+});

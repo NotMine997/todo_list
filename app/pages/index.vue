@@ -51,12 +51,12 @@ const clearCompleted = () => {
 </script>
 
 <template>
-  <main class="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
-    <div class="w-1/2 mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 border border-slate-100">
+  <main class="min-h-screen bg-neutral-900/20 py-12 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+    <div class="w-1/2 mx-auto bg-neutral-100 rounded-xl shadow-md overflow-hidden p-6 border border-slate-100 colors-transition">
       
       <div class="flex items-center justify-between mb-6">
         <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Мои задачи</h1>
-        <span class="bg-blue-50 text-black-600 text-s font-semibold px-2.5 py-1 rounded-full">
+        <span class="bg-indigo-200 text-black-600 text-s font-semibold px-2.5 py-1 rounded-full">
           Осталось: {{ activeCount }}
         </span>
       </div>
@@ -70,7 +70,7 @@ const clearCompleted = () => {
         />
         <button
           type="submit"
-          class="px-4 py-2 min-w-1/3 bg-green-600 hover:bg-green-700 text-white font-medium text-md rounded-lg transition-colors focus:outline-none"
+          class="px-4 py-2 min-w-1/3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-md rounded-lg transition-colors focus:outline-none"
         >
           Добавить
         </button>
@@ -121,7 +121,7 @@ const clearCompleted = () => {
               type="checkbox"
               :checked="todo.completed"
               @change="toggleTodo(todo.id)"
-              class="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+              class="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer"
             />
             <span 
               :class="['text-sm truncate select-none cursor-pointer flex-1', todo.completed ? 'line-through text-slate-400' : 'text-slate-700']"
