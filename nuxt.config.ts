@@ -17,18 +17,21 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/color-mode", "@nuxt/icon"],
   colorMode: {
+    preference: "system",
+    fallback: "dark",
     classSuffix: "",
+    storageKey: "nuxt-color-mode",
   },
   icon: {
-    clientBundle:{
-      includeCustomCollections: true
+    clientBundle: {
+      includeCustomCollections: true,
     },
     customCollections: [
-    {
-      prefix: 'local',
-      dir: './app/assets/icons',
-      recursive: true
-    }
-    ]
+      {
+        prefix: "local",
+        dir: "./app/assets/icons",
+        recursive: true,
+      },
+    ],
   },
 });

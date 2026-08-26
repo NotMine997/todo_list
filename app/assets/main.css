@@ -1,22 +1,72 @@
+
 @import "tailwindcss";
+
 @theme inline {
-  --color-brand-bg: var(--bg-main);
-  --color-brand-text: var(--text-main);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-on-accent: var(--text-on-accent);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-active: var(--surface-active);
+  --color-surface-transparent: var(--surface-transparent);
+
+  --color-border-primary: var(--border-primary);
+  --color-input-bg: var(--input-bg);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+
+  --color-status-danger: var(--status-danger);
 }
 
 :root {
-  --bg-main: #ffffff;
-  --text-main: #171717;
+  --text-primary: #0f172a; /* slate-900 */
+  --text-secondary: #64748b; /* slate-500 */
+  --text-muted: #94a3b8; /* slate-400 */
+  --text-on-accent: #ffffff;
+
+  --bg-primary: #f1f5f9 / 0.2; /* neutral-900/20 */
+  --surface-primary: #f5f5f5; /* neutral-100 */
+  --surface-secondary: #fafafa; /* neutral-50 */
+  --surface-hover: #f1f5f9 / 0.8; /* slate-100/80 */
+  --surface-active: #f1f5f9; /* slate-100 */
+  --surface-transparent: #ffffff / 0.7; /* white/70 */
+
+  --border-primary: #e2e8f0; /* slate-200 */
+  --input-bg: #ffffff;
+
+  --accent: #4f46e5; /* indigo-600 */
+  --accent-hover: #4338ca; /* indigo-700 */
+  --accent-light: #c7d2fe; 
+
+  --status-danger: #ef4444; /* red-500 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-main: #0a0a0a;
-    --text-main: #ededed;
-  }
-}
 
 .dark {
-  --bg-main: #0a0a0a;
-  --text-main: #ededed;
+  --text-primary: #f1f5f9; /* slate-100 */
+  --text-secondary: #94a3b8; /* slate-400 */
+  --text-muted: #64748b; /* slate-500 */
+  --text-on-accent: #ffffff;
+
+  --bg-primary: #0f172a; /* slate-900 */
+  --surface-primary: #1e293b; /* slate-800 */
+  --surface-secondary: #0a0a0a; /* neutral-950 */
+  --surface-hover: #475569; /* slate-600 */
+  --surface-active: #334155; /* slate-700 */
+  --surface-transparent: #0f172a / 0.7; /* slate-900/70 */
+
+  --border-primary: #1e293b; /* slate-800 */
+  --input-bg: #0a0a0a; 
+
+  --accent: #6366f1; /* indigo-400 */
+  --accent-hover: #818cf8; /* indigo-300 */
+  --accent-light: #312e81; /* indigo-900 */
+
+  --status-danger: #f87171; /* red-400 */
 }

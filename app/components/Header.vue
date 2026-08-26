@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-0 z-50 border-b border-gray-100 bg-white/70 backdrop-blur-md dark:border-gray-800/60 dark:bg-gray-950/70"
+    class="sticky top-0 z-50 bg-surface-secondary border-b border-border-primary"
   >
     <div
       class="mx-auto flex max-w-7xl items-center justify-between p-4 sm:px-6 lg:px-8"
@@ -8,10 +8,10 @@
       <div class="flex lg:flex-1">
         <a
           href="/"
-          class="flex items-center gap-2.5 text-xl font-black tracking-tight text-neutral-900 dark:text-neutral-50"
+          class="flex items-center gap-2.5 text-xl font-black tracking-tight text-text-primary"
         >
           <span
-            class="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 text-sm font-bold text-white shadow-sm shadow-indigo-500/30"
+            class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-sm font-bold text-text-on-accent shadow-sm shadow-accent/30"
           >
             <!-- LOGO HERE -->
           </span>
@@ -20,37 +20,39 @@
       </div>
 
       <nav class="hidden lg:flex lg:gap-x-10">
-        <!-- ЦВЕТОВАЯ ЗАГЛУШКА -->
+        <a href="#" class="text-sm font-medium text-accent transition-colors">
+          Главная
+        </a>
         <a
           href="#"
-          class="text-sm font-medium text-indigo-600 dark:text-indigo-400"
-          >Главная</a
+          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
         >
+          Задачи
+        </a>
         <a
           href="#"
-          class="text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
-          >Задачи</a
+          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
         >
+          Статистика
+        </a>
         <a
           href="#"
-          class="text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
-          >Статистика</a
+          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
         >
+          Время
+        </a>
         <a
           href="#"
-          class="text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
-          >Время</a
+          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
         >
+          Погода
+        </a>
         <a
           href="#"
-          class="text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
-          >Погода</a
+          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
         >
-        <a
-          href="#"
-          class="text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
-          >ИИ-Ассистент</a
-        >
+          ИИ-Ассистент
+        </a>
       </nav>
 
       <div
@@ -58,28 +60,35 @@
       >
         <a
           href="#"
-          class="text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
         >
           Войти
         </a>
         <a
           href="#"
-          class="inline-flex h-9 items-center justify-center rounded-xl bg-neutral-900 px-4 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-200 transition-colors"
+          class="inline-flex h-9 items-center justify-center rounded-xl bg-accent px-4 text-sm font-semibold text-text-on-accent shadow-sm hover:bg-accent-hover transition-colors"
         >
           Регистрация
         </a>
-        <button @click="toggleTheme" class="flex">
-          <Icon 
-            :name="$colorMode.value === 'dark' ? 'local:light' : 'local:dark'" class="" size="26"/>
+        <button
+          @click="toggleTheme"
+          class=""
+        >
+        <ColorScheme placeholder="...">
+          <span v-if="colorMode.value === 'dark'"><Icon name="local:dark" size="34" class=""/></span>
+          <span v-else><Icon name="local:light" size="34" class=""/></span>
+        </ColorScheme>
         </button>
       </div>
+      
     </div>
   </header>
 </template>
+
 <script setup>
-const colorMode = useColorMode()
+const colorMode = useColorMode();
 
 const toggleTheme = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-}
+  colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+};
 </script>
