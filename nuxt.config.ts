@@ -16,12 +16,14 @@ export default defineNuxtConfig({
   },
 
   modules: ["@nuxtjs/color-mode", "@nuxt/icon"],
+
   colorMode: {
     preference: "system",
     fallback: "dark",
     classSuffix: "",
     storageKey: "nuxt-color-mode",
   },
+  
   icon: {
     clientBundle: {
       includeCustomCollections: true,
@@ -34,4 +36,5 @@ export default defineNuxtConfig({
       },
     ],
   },
+
 });

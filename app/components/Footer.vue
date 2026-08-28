@@ -1,19 +1,15 @@
 <template>
   <footer
-    class="border-t border-border-primary bg-surface-secondary transition-colors"
+    class="border-t border-border-primary bg-surface-secondary transition-colors duration-300"
   >
-    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8 select-none">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 xl:gap-12">
         <div class="space-y-4 md:col-span-1">
           <span
             class="flex items-center gap-2 text-lg font-bold tracking-tight text-text-primary"
           >
             <!-- LOGO HERE -->
-            <span
-              class="flex h-6 w-6 items-center justify-center rounded-lg bg-accent text-sm font-bold text-text-on-accent"
-            >
-            
-            </span>
+            <Icon name="local:logo" size="29" />
             TickTask
           </span>
           <p class="text-sm leading-relaxed text-text-secondary">

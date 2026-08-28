@@ -1,86 +1,71 @@
 <template>
   <header
-    class="sticky top-0 z-50 bg-surface-secondary border-b border-border-primary"
+    class="sticky top-0 z-50 bg-surface-secondary border-b border-border-primary transition-colors duration-300"
   >
     <div
-      class="mx-auto flex max-w-7xl items-center justify-between p-4 sm:px-6 lg:px-8"
+      class="mx-auto flex max-w-7xl items-center justify-between p-3 sm:px-5 lg:px-7 select-none"
     >
       <div class="flex lg:flex-1">
-        <a
-          href="/"
+        <nuxt-link
+          to="/"
           class="flex items-center gap-2.5 text-xl font-black tracking-tight text-text-primary"
         >
-          <span
-            class="flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-sm font-bold text-text-on-accent shadow-sm shadow-accent/30"
-          >
-            <!-- LOGO HERE -->
-          </span>
-          TickTask
-        </a>
+          <Icon name="local:logo" size="29" /> TickTask</nuxt-link
+        >
       </div>
 
       <nav class="hidden lg:flex lg:gap-x-10">
-        <a href="#" class="text-sm font-medium text-accent transition-colors">
-          Главная
-        </a>
-        <a
-          href="#"
+        <nuxt-link
+          to="/"
           class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >Главная</nuxt-link
         >
-          Задачи
-        </a>
-        <a
-          href="#"
+        <nuxt-link
+          to="/tasks"
           class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >Задачи</nuxt-link
         >
-          Статистика
-        </a>
-        <a
-          href="#"
+        <nuxt-link
+          to="/time"
           class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >Время</nuxt-link
         >
-          Время
-        </a>
-        <a
-          href="#"
+        <nuxt-link
+          to="/weather"
           class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >Погода</nuxt-link
         >
-          Погода
-        </a>
-        <a
-          href="#"
+        <nuxt-link
+          to="/ai"
           class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+          >ИИ-Ассистент</nuxt-link
         >
-          ИИ-Ассистент
-        </a>
       </nav>
 
       <div
         class="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-6"
       >
-        <a
-          href="#"
-          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+        <nuxt-link
+          to="/auth/login"
+          class="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors select-none"
         >
           Войти
-        </a>
-        <a
-          href="#"
+        </nuxt-link>
+        <nuxt-link
+          to="/auth/register"
           class="inline-flex h-9 items-center justify-center rounded-xl bg-accent px-4 text-sm font-semibold text-text-on-accent shadow-sm hover:bg-accent-hover transition-colors"
         >
           Регистрация
-        </a>
-        <button
-          @click="toggleTheme"
-          class=""
-        >
-        <ColorScheme placeholder="...">
-          <span v-if="colorMode.value === 'dark'"><Icon name="local:dark" size="34" class=""/></span>
-          <span v-else><Icon name="local:light" size="34" class=""/></span>
-        </ColorScheme>
+      </nuxt-link>
+        <button @click="toggleTheme" class="">
+          <ColorScheme placeholder="...">
+            <span v-if="colorMode.value === 'dark'"
+              ><Icon name="local:dark" size="34" class=""
+            /></span>
+            <span v-else><Icon name="local:light" size="34" class="" /></span>
+          </ColorScheme>
         </button>
       </div>
-      
     </div>
   </header>
 </template>
