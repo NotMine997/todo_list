@@ -13,12 +13,19 @@
     "@nuxt/icon": "^2.5.1",
     "@nuxtjs/color-mode": "^4.0.1",
     "@tailwindcss/vite": "^4.3.3",
+    "@vite-pwa/nuxt": "^1.1.1",
     "nuxt": "^4.5.2",
+    "nuxt-time": "^1.0.3",
     "openmeteo": "^1.2.3",
+    "vite-pwa": "^1.0.2",
     "vue": "^3.5.41",
     "vue-router": "^5.2.0"
   },
   "allowScripts": {
     "esbuild@0.28.2": true
+  },
+  "devDependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
+    "@types/node": "^26.6.2"
   }
 }

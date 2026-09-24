@@ -8,7 +8,6 @@
           <span
             class="flex items-center gap-2 text-lg font-bold tracking-tight text-text-primary"
           >
-            <!-- LOGO HERE -->
             <Icon name="local:logo" size="29" />
             TickTask
           </span>

@@ -4,7 +4,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   css: ["~/assets/main.css"],
-
+  runtimeConfig: {
+    openWeatherApiKey: process.env.OPENWEATHER_API_KEY,
+  },
   vite: {
     plugins: [tailwindcss()],
   },
@@ -15,15 +17,14 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/color-mode", "@nuxt/icon"],
-
+  modules: ["@nuxtjs/color-mode", "@nuxt/icon", "nuxt-time", "@vite-pwa/nuxt"],
   colorMode: {
     preference: "system",
     fallback: "dark",
     classSuffix: "",
     storageKey: "nuxt-color-mode",
   },
-  
+
   icon: {
     clientBundle: {
       includeCustomCollections: true,
@@ -36,5 +37,4 @@ export default defineNuxtConfig({
       },
     ],
   },
-
 });

@@ -20,6 +20,7 @@ watch(
   { deep: true },
 );
 
+
 const filteredTodos = computed(() => {
   if (filter.value === "active") return todos.value.filter((t) => !t.completed);
   if (filter.value === "completed")
@@ -140,7 +141,7 @@ const clearCompleted = () => {
       <TransitionGroup
         name="list"
         tag="ul"
-        class="space-y-2 max-h-100 overflow-y-auto pr-1"
+        class="space-y-2 max-h-150 overflow-y-auto pr-1"
       >
         <li
           v-for="todo in filteredTodos"
@@ -186,14 +187,3 @@ const clearCompleted = () => {
   </main>
 </template>
 
-<style scoped>
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.2s ease;
-}
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(-10px);
-}
-</style>

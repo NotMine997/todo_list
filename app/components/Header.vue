@@ -57,12 +57,12 @@
         >
           Регистрация
       </nuxt-link>
-        <button @click="toggleTheme" class="">
+        <button @click="toggleTheme" class="flex">
           <ColorScheme placeholder="...">
-            <span v-if="colorMode.value === 'dark'"
-              ><Icon name="local:dark" size="34" class=""
+            <span v-if="colorMode.value === 'dark'" class="flex"
+              ><Icon name="local:dark" size="31" class=""
             /></span>
-            <span v-else><Icon name="local:light" size="34" class="" /></span>
+            <span v-else class="flex"><Icon name="local:light" size="31" class="" /></span>
           </ColorScheme>
         </button>
       </div>
