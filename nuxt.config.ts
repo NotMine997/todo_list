@@ -37,4 +37,27 @@ export default defineNuxtConfig({
       },
     ],
   },
+  pwa: {
+    strategies: "injectManifest",
+    srcDir: "service-worker",
+    filename: "sw.ts",
+    registerType: "autoUpdate",
+    manifest: {
+      name: "Nuxt 4 PWA Application",
+      short_name: "Nuxt4PWA",
+      theme_color: "#00dc82", 
+      lang: "ru",
+    },
+    workbox: {
+      navigateFallback: '/', 
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'] 
+    },
+    devOptions: {
+      enabled: true, 
+      type: "module",
+    },
+  },
+  experimental: {
+    appManifest: true
+  }
 });
