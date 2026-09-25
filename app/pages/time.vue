@@ -24,7 +24,7 @@ const {
   <main
     class="min-h-screen flex items-start justify-center bg-bg-primary px-4 sm:px-6 lg:px-8 font-sans text-text-primary transition-colors duration-300 py-16"
   >
-    <div class="w-full max-w-5xl flex flex-col gap-6">
+    <div class="w-full max-w-5xl flex flex-col gap-6 select-none">
 
       <div
         class="w-full flex items-center justify-center bg-surface-primary border border-border-primary rounded-xl py-16 px-8 transition-colors duration-300 select-none"

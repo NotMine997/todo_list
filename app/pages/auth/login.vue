@@ -7,7 +7,8 @@
 <script lang="ts" setup>
 
 definePageMeta({
-  layout: 'empty' 
+  layout: 'empty',
+  layoutTransition: false
 })
 </script>
 

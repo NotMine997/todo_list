@@ -60,23 +60,26 @@ const clearCompleted = () => {
 
 <template>
   <main
-    class="min-h-screen bg-bg-primary py-12 px-4 sm:px-6 lg:px-8 font-sans text-text-primary transition-colors duration-300"
+    class="min-h-screen bg-bg-primary py-6 px-3 sm:py-12 sm:px-6 lg:px-8 font-sans text-text-primary transition-colors duration-300"
   >
     <div
-      class="w-1/2 mx-auto bg-surface-primary rounded-xl overflow-hidden p-6 transition-colors duration-300 select-none"
+      class="w-full sm:w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-surface-primary rounded-xl overflow-hidden p-4 sm:p-6 transition-colors duration-300 select-none"
     >
-      <div class="flex items-center justify-between mb-6">
-        <h1 class="text-2xl font-bold text-text-primary tracking-tight">
+      <div class="flex items-center justify-between gap-3 mb-5 sm:mb-6">
+        <h1 class="text-xl sm:text-2xl font-bold text-text-primary tracking-tight">
           Мои задачи
         </h1>
         <span
-          class="bg-accent text-text-on-accent text-s font-semibold px-2.5 py-1 rounded-full transition-colors duration-300"
+          class="bg-accent text-text-on-accent text-xs sm:text-s font-semibold px-2.5 py-1 rounded-full transition-colors duration-300 whitespace-nowrap"
         >
           Осталось: {{ activeCount }}
         </span>
       </div>
 
-      <form @submit.prevent="addTodo" class="flex gap-2 mb-6">
+      <form
+        @submit.prevent="addTodo"
+        class="flex flex-col sm:flex-row gap-2 mb-5 sm:mb-6"
+      >
         <input
           v-model="newTodoText"
           type="text"
@@ -85,16 +88,16 @@ const clearCompleted = () => {
         />
         <button
           type="submit"
-          class="px-4 py-2 min-w-1/3 bg-accent hover:bg-accent-hover text-text-on-accent font-medium text-md rounded-lg transition-colors focus:outline-none cursor-pointer"
+          class="px-4 py-2 sm:min-w-1/3 bg-accent hover:bg-accent-hover text-text-on-accent font-medium text-sm sm:text-md rounded-lg transition-colors focus:outline-none cursor-pointer"
         >
           Добавить
         </button>
       </form>
 
       <div
-        class="flex items-center justify-between border-b border-border-primary pb-4 mb-4 text-s font-medium text-text-secondary"
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-border-primary pb-4 mb-4 text-xs sm:text-s font-medium text-text-secondary"
       >
-        <div class="flex gap-1">
+        <div class="flex gap-1 flex-wrap">
           <button
             @click="filter = 'all'"
             :class="[
@@ -132,7 +135,7 @@ const clearCompleted = () => {
 
         <button
           @click="clearCompleted"
-          class="hover:text-status-danger transition-colors text-text-muted cursor-pointer"
+          class="hover:text-status-danger transition-colors text-text-muted cursor-pointer text-left sm:text-right"
         >
           Удалить выполненные
         </button>
@@ -153,7 +156,7 @@ const clearCompleted = () => {
               type="checkbox"
               :checked="todo.completed"
               @change="toggleTodo(todo.id)"
-              class="h-4 w-4 rounded text-accent focus:ring-accent cursor-pointer"
+              class="h-4 w-4 rounded text-accent focus:ring-accent cursor-pointer shrink-0"
             />
             <span
               :class="[
@@ -170,7 +173,7 @@ const clearCompleted = () => {
 
           <button
             @click="deleteTodo(todo.id)"
-            class="text-text-muted hover:text-status-danger p-1 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity"
+            class="text-text-muted hover:text-status-danger p-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 transition-opacity shrink-0"
             aria-label="Удалить задачу"
           >
           </button>
@@ -186,4 +189,3 @@ const clearCompleted = () => {
     </div>
   </main>
 </template>
-

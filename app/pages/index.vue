@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { definePage } from 'vue-router/experimental';
+
 const features = [
   {
     title: 'Список задач',
@@ -21,6 +23,10 @@ const features = [
     icon: 'local:star'
   },
 ];
+definePageMeta({
+  layout: 'empty',
+  layoutTransition: false
+})
 </script>
 
 <template>

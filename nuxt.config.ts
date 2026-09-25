@@ -15,6 +15,14 @@ export default defineNuxtConfig({
     head: {
       title: "TickTask",
     },
+    pageTransition:{
+      name:'page',
+      mode: 'out-in'
+    },
+    layoutTransition:{
+      name: 'layout',
+      mode: 'out-in'
+    }
   },
 
   modules: ["@nuxtjs/color-mode", "@nuxt/icon", "nuxt-time", "@vite-pwa/nuxt"],

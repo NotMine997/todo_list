@@ -30,13 +30,13 @@ loadWeather();
 
 <template>
   <main
-    class="min-h-screen bg-bg-primary py-12 px-4 sm:px-6 lg:px-8 font-sans text-text-primary transition-colors duration-300"
+    class="min-h-screen bg-bg-primary py-6 px-3 sm:py-12 sm:px-6 lg:px-8 font-sans text-text-primary transition-colors duration-300"
   >
     <div
-      class="w-1/2 mx-auto bg-surface-primary rounded-xl overflow-hidden p-6 transition-colors duration-300"
+      class="w-full sm:w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-surface-primary rounded-xl overflow-hidden p-4 sm:p-6 transition-colors duration-300"
     >
       <h1
-        class="text-2xl font-bold mb-6 text-text-primary tracking-tight"
+        class="text-xl sm:text-2xl font-bold mb-5 sm:mb-6 text-text-primary tracking-tight"
       >
         Погода в {{ city }}
       </h1>
@@ -49,7 +49,7 @@ loadWeather();
       </div>
 
       <div v-else-if="weather" class="space-y-4">
-        <div class="text-xl font-semibold text-text-primary">
+        <div class="text-lg sm:text-xl font-semibold text-text-primary">
           {{ weather.name }}, {{ weather.sys.country }}
         </div>
 
@@ -59,19 +59,19 @@ loadWeather();
           <img
             :src="`https://openweathermap.org/img/wn/${weather.weather[0]?.icon}@2x.png`"
             :alt="weather.weather[0]?.description"
-            class="w-12 h-12"
+            class="w-12 h-12 shrink-0"
           />
-          <div>
-            <div class="text-3xl font-bold text-text-primary">
+          <div class="min-w-0">
+            <div class="text-2xl sm:text-3xl font-bold text-text-primary">
               {{ Math.round(weather.main.temp) }}°C
             </div>
-            <div class="text-sm text-text-secondary capitalize">
+            <div class="text-sm text-text-secondary capitalize truncate">
               {{ weather.weather[0]?.description }}
             </div>
           </div>
         </div>
 
-        <ul class="grid grid-cols-2 gap-2 text-sm">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
           <li
             class="p-3 bg-input-bg border border-border-primary rounded-lg text-text-secondary transition-colors duration-300"
           >
@@ -112,7 +112,7 @@ loadWeather();
         />
         <button
           @click="loadWeather"
-          class="mt-3 w-full px-4 py-2 bg-accent hover:bg-accent-hover text-text-on-accent font-medium text-md rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer"
+          class="mt-3 w-full px-4 py-2 bg-accent hover:bg-accent-hover text-text-on-accent font-medium text-sm sm:text-md rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer"
         >
           Обновить
         </button>
