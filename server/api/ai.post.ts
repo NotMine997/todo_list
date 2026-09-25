@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
   const messages = [
     {
       role: 'system',
-      content: 'Ты — дружелюбный ассистент на сайте с todo-листом, погодой и таймерами. Отвечай кратко на русском.',
+      content: 'Ты — дружелюбный ассистент на сайте с todo-листом, погодой и таймерами. Отвечай кратко на РУССКОМ.',
     },
     ...history,
     { role: 'user', content: message },

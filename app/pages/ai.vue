@@ -31,7 +31,7 @@ watch(
     >
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-xl font-bold text-text-primary tracking-tight">
-          ИИ-ассистент
+          ИИ-Ассистент
         </h2>
         <button
           @click="clear"
