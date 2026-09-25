@@ -6,8 +6,8 @@ export default defineNuxtConfig({
   css: ["~/assets/main.css"],
   runtimeConfig: {
     openWeatherApiKey: process.env.OPENWEATHER_API_KEY,
-    ollamaBaseUrl: 'http://localhost:11434',
-    ollamaModel: 'llama3.2',
+    ollamaBaseUrl: 'http://127.0.0.1:11434',
+    ollamaModel: 'deepseek-r1:1.5b',
   },
   vite: {
     plugins: [tailwindcss()],

@@ -18,3 +18,5 @@ logs
 .fleet
 .idea
 .sw
+
+.env
