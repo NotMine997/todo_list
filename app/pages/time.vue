@@ -25,7 +25,7 @@ const {
     class="min-h-screen flex items-start justify-center bg-bg-primary px-4 sm:px-6 lg:px-8 font-sans text-text-primary transition-colors duration-300 py-16"
   >
     <div class="w-full max-w-5xl flex flex-col gap-6">
-      <!-- ====================== ЧАСЫ ====================== -->
+
       <div
         class="w-full flex items-center justify-center bg-surface-primary border border-border-primary rounded-xl py-16 px-8 transition-colors duration-300 select-none"
       >
@@ -36,9 +36,9 @@ const {
         </div>
       </div>
 
-      <!-- ============ ТАЙМЕР + СЕКУНДОМЕР ============ -->
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Секундомер -->
+
         <section class="bg-surface-primary border border-border-primary rounded-xl p-6 transition-colors duration-300">
           <h2 class="text-xl font-bold text-text-primary tracking-tight mb-4">Секундомер</h2>
 
@@ -72,7 +72,6 @@ const {
           </div>
         </section>
 
-        <!-- Таймер -->
         <section class="bg-surface-primary border border-border-primary rounded-xl p-6 transition-colors duration-300">
           <h2 class="text-xl font-bold text-text-primary tracking-tight mb-4">Таймер</h2>
 
