@@ -19,4 +19,5 @@ logs
 .idea
 .sw
 
+#env
 .env
