@@ -70,3 +70,6 @@
 
   --status-danger: #f87171; /* red-400 */
 }
+html {
+  scroll-behavior: smooth;
+}
